@@ -13,7 +13,7 @@ cats
 hamsters
 parrot
 ```
-![Text](images\images_1.jpg)
+![Alt text](images\images_1.jpg)
 ```sh
 Создаём файл вьючные животными и заполняем.
 
@@ -22,7 +22,7 @@ horses
 camels
 donkeys
 ```
-![Text](images\images_2.jpg)
+![Alt text](images\images_2.jpg)
 
 ```sh
 Объединяем два файла в один дав ему новое имя
@@ -35,14 +35,14 @@ cat pets pack_animals > friends_man
 cat friends_man
 ```
 
-![Text](images\images_3.jpg)
+![Alt text](images\images_3.jpg)
 
 ```sh
 Переименовываем friends_man в friends_man_new.
 mv friends_man friends_man_new
 
 ```
- ![Text](images\images_4.jpg)
+ ![Alt text](images\images_4.jpg)
 
 2. Создать директорию, переместить файл туда.
 ```sh   
