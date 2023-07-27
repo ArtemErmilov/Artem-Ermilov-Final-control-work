@@ -13,7 +13,7 @@ cats
 hamsters
 parrot
 ```
-![Alt text](images\images_1.jpg)
+![Alt text]([images\images_1.jpg](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_1.jpg))
 ```sh
 Создаём файл вьючные животными и заполняем.
 
