@@ -36,12 +36,12 @@ cat friends_man
 ```
 
 ![Text](images\images_3.jpg)
-    ```sh
-    Переименовываем friends_man в friends_man_new.
 
-    mv friends_man friends_man_new
+```sh
+Переименовываем friends_man в friends_man_new.
+mv friends_man friends_man_new
 
-    ```
+```
  ![Text](images\images_4.jpg)
 
 2. Создать директорию, переместить файл туда.
