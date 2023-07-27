@@ -13,7 +13,10 @@ cats
 hamsters
 parrot
 ```
+
 ![Alt text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_1.jpg)
+
+
 ```sh
 Создаём файл вьючные животными и заполняем.
 
@@ -44,7 +47,7 @@ mv friends_man friends_man_new
 ```
  ![Alt text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_4.jpg)
 
-2. Создать директорию, переместить файл туда.
+1. Создать директорию, переместить файл туда.
 ```sh   
 mkdir new_animals
 ```
