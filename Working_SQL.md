@@ -186,3 +186,38 @@ SELECT `name`, 'Horse' AS `species`, TIMESTAMPDIFF(MONTH, `birth_date`, CURDATE(
 FROM `horses`
 WHERE `birth_date` <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND `birth_date` >= DATE_SUB(CURDATE(), INTERVAL 3 YEAR);
 ```
+
+12. Объединить все таблицы в одну, при этом сохраняя поля, указывающие на
+прошлую принадлежность к старым таблицам.
+
+```sql
+CREATE TABLE `all_animals` (
+   id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+  `name` VARCHAR(50) NOT NULL,
+  `skills` VARCHAR(100) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `animal_class_id` INT UNSIGNED NOT NULL,
+  `source_table` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO `all_animals` (`name`, `skills`, `birth_date`, `animal_class_id`, `source_table`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'dogs' AS `source_table`
+FROM `dogs`;
+
+INSERT INTO `all_animals` (`name`, `skills`, `birth_date`, `animal_class_id`, `source_table`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'cats' AS `source_table`
+FROM `cats`;
+
+INSERT INTO `all_animals` (`name`, `skills`, `birth_date`, `animal_class_id`, `source_table`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'donkeys' AS `source_table`
+FROM `donkeys`;
+
+INSERT INTO `all_animals` (`name`, `skills`, `birth_date`, `animal_class_id`, `source_table`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'hamsters' AS `source_table`
+FROM `hamsters`;
+
+INSERT INTO `all_animals` (`name`, `skills`, `birth_date`, `animal_class_id`, `source_table`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'horses' AS `source_table`
+FROM `horses`;
+```
