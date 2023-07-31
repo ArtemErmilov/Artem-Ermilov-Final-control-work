@@ -47,7 +47,8 @@ mv friends_man friends_man_new
 ```
  ![Alt text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_4.jpg)
 
-1. Создать директорию, переместить файл туда.
+2. Создать директорию, переместить файл туда.
+   
 ```sh   
 mkdir new_animals
 ```
@@ -56,3 +57,20 @@ mkdir new_animals
 ```
 
 ![Text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_5.jpg)
+
+3. Подключить дополнительный репозиторий MySQL. Установить любой пакет
+из этого репозитория.
+
+```sh
+sudo apt update
+```
+![Text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_6.jpg)
+
+```sh
+sudo apt update
+```
+
+![Text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_7.jpg)
+
+
+
