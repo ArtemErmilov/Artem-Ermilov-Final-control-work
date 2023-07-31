@@ -84,4 +84,12 @@ dpkg -i mysql-apt-config_0.8.16-1_all.deb
 ```
 ![Text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_9.jpg)
 
+5. Выложить историю команд в терминале ubuntu
+
+```sh
+Вся  история терминала в картинках  показаны под командами.
+```
+
+
+
 
