@@ -95,6 +95,10 @@ dpkg -i mysql-apt-config_0.8.16-1_all.deb
 животных войдут классы: собаки, кошки, хомяки, а в класс вьючные животные
 войдут: Лошади, верблюды и ослы).
 
-![Text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/diagram_zoo.dio)
+```sh
+Диаграмма находиться в файле diagram_zoo.dio 
+```
+
+![Text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_9.jpg)
 
 
