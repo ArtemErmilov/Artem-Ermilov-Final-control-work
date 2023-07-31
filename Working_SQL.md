@@ -11,13 +11,6 @@
 
 8. Создать таблицы с иерархией из диаграммы в БД
    
-```sql
-DROP DATABASE IF EXISTS `friends_man`;
-
-CREATE DATABASE IF NOT EXISTS `friends_man`;
-```
-
-8. Создать таблицы с иерархией из диаграммы в БД
 
 ```sql
 USE `friends_man`;
@@ -81,4 +74,6 @@ CREATE TABLE `donkeys` (
   FOREIGN KEY (`animal_class_id`) REFERENCES `animals` (`id`) ON DELETE CASCADE
 );
 ```
+
+
 
