@@ -147,3 +147,42 @@ INSERT INTO `horses_and_donkeys` (`name`, `skills`, `birth_date`, `animal_class_
 SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'Donkey' AS `species`
 FROM `donkeys`;
 ```
+
+11. Создать новую таблицу “молодые животные” в которую попадут все
+животные старше 1 года, но младше 3 лет и в отдельном столбце с точностью
+до месяца подсчитать возраст животных в новой таблице
+
+```sql
+CREATE TABLE `young_animals` (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(50) NOT NULL,
+  `species` VARCHAR(20) NOT NULL,
+  `age_months` INT NOT NULL
+);
+
+
+INSERT INTO `young_animals` (`name`, `species`, `age_months`)
+SELECT `name`, 'Dog' AS `species`, TIMESTAMPDIFF(MONTH, `birth_date`, CURDATE()) AS `age_months`
+FROM `dogs`
+WHERE `birth_date` <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND `birth_date` >= DATE_SUB(CURDATE(), INTERVAL 3 YEAR);
+
+INSERT INTO `young_animals` (`name`, `species`, `age_months`)
+SELECT `name`, 'Cat' AS `species`, TIMESTAMPDIFF(MONTH, `birth_date`, CURDATE()) AS `age_months`
+FROM `cats`
+WHERE `birth_date` <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND `birth_date` >= DATE_SUB(CURDATE(), INTERVAL 3 YEAR);
+
+INSERT INTO `young_animals` (`name`, `species`, `age_months`)
+SELECT `name`, 'Donkey' AS `species`, TIMESTAMPDIFF(MONTH, `birth_date`, CURDATE()) AS `age_months`
+FROM `donkeys`
+WHERE `birth_date` <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND `birth_date` >= DATE_SUB(CURDATE(), INTERVAL 3 YEAR);
+
+INSERT INTO `young_animals` (`name`, `species`, `age_months`)
+SELECT `name`, 'Hamster' AS `species`, TIMESTAMPDIFF(MONTH, `birth_date`, CURDATE()) AS `age_months`
+FROM `hamsters`
+WHERE `birth_date` <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND `birth_date` >= DATE_SUB(CURDATE(), INTERVAL 3 YEAR);
+
+INSERT INTO `young_animals` (`name`, `species`, `age_months`)
+SELECT `name`, 'Horse' AS `species`, TIMESTAMPDIFF(MONTH, `birth_date`, CURDATE()) AS `age_months`
+FROM `horses`
+WHERE `birth_date` <= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND `birth_date` >= DATE_SUB(CURDATE(), INTERVAL 3 YEAR);
+```
