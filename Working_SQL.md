@@ -123,4 +123,27 @@ INSERT INTO `friends_man`.`donkeys` (`name`, `skills`, `birth_date`, `animal_cla
   ('Боинг', 'Ко мне', '2019-11-11', 2);
 ```
 
+10. Удалив из таблицы верблюдов, т.к. верблюдов решили перевезти в другой
+питомник на зимовку. Объединить таблицы лошади, и ослы в одну таблицу.
 
+```sql
+DROP TABLE `friends_man`.`camels`;
+  
+CREATE TABLE `horses_and_donkeys` (
+   id INT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+  `name` VARCHAR(50) NOT NULL,
+  `skills` VARCHAR(100) NOT NULL,
+  `birth_date` DATE NOT NULL,
+  `animal_class_id` INT UNSIGNED NOT NULL,
+  `species` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+INSERT INTO `horses_and_donkeys` (`name`, `skills`, `birth_date`, `animal_class_id`, `species`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'Horse' AS `species`
+FROM `horses`;
+
+INSERT INTO `horses_and_donkeys` (`name`, `skills`, `birth_date`, `animal_class_id`, `species`)
+SELECT `name`, `skills`, `birth_date`, `animal_class_id`, 'Donkey' AS `species`
+FROM `donkeys`;
+```
