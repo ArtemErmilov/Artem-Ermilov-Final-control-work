@@ -72,5 +72,16 @@ sudo apt update
 
 ![Text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_7.jpg)
 
+4.  Установить и удалить deb-пакет с помощью dpkg.
+   
+```sh
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.25-1_all.deb
+```
+![Text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_8.jpg)
+
+```sh
+dpkg -i mysql-apt-config_0.8.16-1_all.deb
+```
+![Text](https://github.com/ArtemErmilov/Artem-Ermilov-Final-control-work/blob/main/images/images_9.jpg)
 
 
