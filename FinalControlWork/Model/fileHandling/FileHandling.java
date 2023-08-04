@@ -10,12 +10,12 @@ public class FileHandling {
      * Работа с фалами
      */
 
-    String path = "C:/Users/SBB2-Ермилов Артём/YandexDisk-artyomermiloff/GeegBrains/Обучение/Итоговая контрольная работа/Final control work/";// Место
+    //String path = "C:/Users/SBB2-Ермилов Артём/YandexDisk-artyomermiloff/GeegBrains/Обучение/Итоговая контрольная работа/Final control work/";// Место
                                                                                                                                  // хранения
                                                                                                                                  // файла
                                                                                                                                  // на
                                                                                                                                  // компьютере
-    //String path = "";
+    String path = "";
 
     String nameFileToy = "FinalControlWork/Animals.txt"; // Название файла для хранения списка игрушек розыгрыша.
 
